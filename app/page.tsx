@@ -1,34 +1,41 @@
-<section className="relative w-full overflow-hidden">
+'use client';
 
-  {/* IMAGE */}
-  <img
-    src="/hero.png"
-    className="w-full h-auto object-contain"
-  />
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-black text-white">
+      <section className="relative w-full overflow-hidden">
+        <img
+          src="/hero.png"
+          alt="MK DEL3TE neon cyberpunk homepage"
+          className="block h-auto w-full object-contain"
+        />
 
-  {/* NAV */}
-  <div className="absolute top-0 w-full flex justify-between px-10 py-6 text-sm tracking-widest z-10">
-    <div className="text-cyan-400 font-bold">MK DEL3TE</div>
+        <nav className="absolute left-0 top-0 z-10 flex w-full items-center justify-between px-6 py-5 text-[10px] font-semibold tracking-[0.28em] text-white/85 md:px-10 md:text-xs">
+          <a href="#top" className="font-black text-cyan-300 drop-shadow-[0_0_12px_rgba(0,255,255,.9)]">
+            MK DEL3TE
+          </a>
 
-    <div className="flex gap-8 text-white/80">
-      <a>HOME</a>
-      <a>MUSIC</a>
-      <a>LIVE</a>
-      <a>PROJECT RECORDS</a>
-      <a>ABOUT</a>
-      <a>CONTACT</a>
-    </div>
-  </div>
+          <div className="hidden gap-7 md:flex">
+            <a href="#top" className="hover:text-cyan-300">HOME</a>
+            <a href="#music" className="hover:text-cyan-300">MUSIC</a>
+            <a href="#live" className="hover:text-cyan-300">LIVE</a>
+            <a href="https://project-records.com" target="_blank" rel="noreferrer" className="hover:text-fuchsia-300">PROJECT RECORDS</a>
+            <a href="#about" className="hover:text-cyan-300">ABOUT</a>
+            <a href="#contact" className="hover:text-cyan-300">CONTACT</a>
+          </div>
+        </nav>
 
-  {/* BUTTON */}
-  <div className="absolute bottom-[8%] w-full flex justify-center z-10">
-    <a
-      href="https://project-records.com"
-      target="_blank"
-      className="border border-pink-500 px-8 py-3 hover:bg-pink-500/20 transition"
-    >
-      PROJECT RECORDS
-    </a>
-  </div>
-
-</section>
+        <div className="absolute bottom-[8%] left-0 z-10 flex w-full justify-center">
+          <a
+            href="https://project-records.com"
+            target="_blank"
+            rel="noreferrer"
+            className="border border-fuchsia-400/90 bg-black/30 px-7 py-3 text-[10px] font-bold tracking-[0.28em] text-white shadow-[0_0_18px_rgba(255,0,220,.45)] backdrop-blur-sm transition hover:border-cyan-300 hover:bg-cyan-400/10 md:text-xs"
+          >
+            PROJECT RECORDS
+          </a>
+        </div>
+      </section>
+    </main>
+  );
+}
